@@ -23,8 +23,10 @@ Route::get('/', function () {
 
 Route::get('/comics', function () {
     $links = config('links');
+    $comics = config('comics');
     $data = [
-        'links' => $links
+        'links' => $links,
+        'comics' => $comics
     ];
     return view('comics', $data);
 })->name('comics');
